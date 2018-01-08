@@ -60,11 +60,11 @@ Network::Network(const Options *options) :
     else {
         m_strategy = new SinglePoolStrategy(pools.front(), Platform::userAgent(), this);
     }
-
+/*
     if (m_options->donateLevel() > 0) {
         m_donate = new DonateStrategy(Platform::userAgent(), this);
     }
-
+*/
     m_timer.data = this;
     uv_timer_init(uv_default_loop(), &m_timer);
 
